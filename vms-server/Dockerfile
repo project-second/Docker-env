@@ -6,10 +6,13 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
+        less \
         pkg-config \
         build-essential \
         cmake \
         git \
+        vim \
+        nano \
         openssl \
         libssl-dev \
         gsoap \

@@ -88,11 +88,14 @@ docker build -t linear-cctv-cctv-bsp-dev ./cctv-bsp
 ### vms-server
 
 ```bash
-docker run -it --rm \
+docker run -it \
   --name linear-cctv-vms-server-dev \
   -p 8080:80 \
   -p 5432:5432 \
   -p 8554:8554 \
+  -v "$PWD":/workspace \
+  -v vms-postgres-data:/var/lib/postgresql \
+  -w /workspace \
   linear-cctv-vms-server-dev
 ```
 
@@ -118,16 +121,20 @@ psql -h localhost -p 5432 -U postgres
 ### cctv-app
 
 ```bash
-docker run -it --rm \
+docker run -it \
   --name linear-cctv-cctv-app-dev \
+  -v "$PWD":/workspace \
+  -w /workspace \
   linear-cctv-cctv-app-dev
 ```
 
 ### cctv-bsp
 
 ```bash
-docker run -it --rm \
+docker run -it \
   --name linear-cctv-cctv-bsp-dev \
+  -v "$PWD":/workspace \
+  -w /workspace \
   linear-cctv-cctv-bsp-dev
 ```
 
