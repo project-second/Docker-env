@@ -10,11 +10,15 @@ RUN apt-get update \
         pkg-config \
         build-essential \
         cmake \
+        ninja-build \
+        ccache \
+        gdb \
         git \
         vim \
         nano \
         openssl \
         libssl-dev \
+        libyaml-cpp-dev \
         gsoap \
         libgsoap-dev \
         nginx \
