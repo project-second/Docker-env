@@ -25,6 +25,7 @@ RUN apt-get update \
         postgresql \
         postgresql-contrib \
         libpq-dev \
+        libpqxx-dev \
         gstreamer1.0-tools \
         gstreamer1.0-plugins-base \
         gstreamer1.0-plugins-good \
